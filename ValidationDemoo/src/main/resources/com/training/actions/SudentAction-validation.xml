@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="student.name">
+		<field-validator type="requiredstring">
+			<message>Name is reqired</message>
+		</field-validator>
+	</field>
+
+	<field name="student.password">
+		<field-validator type="pattern">
+			<message>Enter correct password</message>
+		</field-validator>
+	</field>
+
+	<field name="student.age">
+		<field-validator type="int">
+			<param name="min">20</param>
+			<param name="max">80</param>
+			<message>Age should be between 20 and 80</message>
+		</field-validator>
+	</field>
+
+	<field name="student.gender">
+		<field-validator type="requiredstring">
+			<param name="male"></param>
+			<param name="female"></param>
+			<message>gender is required</message>
+		</field-validator>
+	</field>
+
+	<field name="student.course">
+		<field-validator type="list">
+			<message>select one</message>
+		</field-validator>
+	</field>
+
+	<field name="student.email">
+		<field-validator type="requiredstring">
+			<message>Email is not valid</message>
+		</field-validator>
+	</field>
+
+	<field name="student.mobile">
+		<field-validator type="long">
+			<param name="min">10</param>
+			<param name="max">10</param>
+			<message>Enter valid number</message>
+		</field-validator>
+	</field>
+
+	<!-- <field name="student.allowance">
+		<field-validator type="double">
+			<param name="minInclusive">1000</param>
+			<message>pocket money is required</message>
+		</field-validator>
+	</field> -->
+
+<field name="student.hobbies">
+		<field-validator type="requiredstring">
+			<message>hobbies required</message>
+		</field-validator>
+	</field>
+
+
+</validators>
